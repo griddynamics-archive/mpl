@@ -125,7 +125,7 @@ abstract class MPLTestBase extends BasePipelineTest {
     if( curr_heads.size() == 0 )
       return []
     else if( curr_heads.size() > 1 )
-      throw Exception("Invalid number of current heads: ${curr_heads.size()} - unable to determine the current one")
+      throw new Exception("Invalid number of current heads: ${curr_heads.size()} - unable to determine the current one")
 
     for( def l = 0; l < level; l++ )
       curr_heads += [mpl_blocks[curr_heads.last().parent]]
